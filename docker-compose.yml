@@ -25,7 +25,7 @@ services:
     volumes:
       - ./api:/usr/app
     environment:
-      - CHOKIDAR _USEPOLLING=true
+      - CHOKIDAR_USEPOLLING=true
     restart: always
     stdin_open: true
     tty: true
