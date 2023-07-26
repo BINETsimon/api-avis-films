@@ -1,1 +1,1 @@
-40 22 * * * /usr/api/db/backup.sh
+36 22 * * * /usr/api/db/backup.sh
