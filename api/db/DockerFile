@@ -13,5 +13,7 @@ RUN chmod +x /backup.sh
 # Copie le fichier crontab dans le conteneur
 COPY crontab /etc/cron.d/db_backup_cron
 
+RUN echo 'test'
+
 # Démarre le service cron au démarrage du conteneur
 CMD ["cron", "-f"]
