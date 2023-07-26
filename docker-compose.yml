@@ -5,6 +5,7 @@ services:
     container_name: db-container
     image: postgres
     restart: always
+    build: ./api/db
     hostname: db
     env_file:
       - api/.env
