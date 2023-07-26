@@ -9,4 +9,4 @@ WORKDIR /usr/app
 COPY . .
 
 # Install Dependencies
-RUN npm install --silent
+RUN npm install

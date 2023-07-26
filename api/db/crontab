@@ -1,1 +1,1 @@
-0 0 * * * /path/to/your/script/backup.sh
+0 0 * * * backup.sh
