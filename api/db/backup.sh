@@ -10,7 +10,7 @@ DB_PASSWORD="$POSTGRES_PASSWORD"
 DB_NAME="$POSTGRES_DB"
 
 # Répertoire de sauvegarde
-BACKUP_DIR="/path/to/backup/directory"  # Remplacez par le répertoire où vous souhaitez stocker les sauvegardes
+BACKUP_DIR="/backups"  # Remplacez par le répertoire où vous souhaitez stocker les sauvegardes
 
 # Nom du fichier de sauvegarde
 BACKUP_FILENAME="db_backup_$(date +%Y%m%d_%H%M%S).sql"
