@@ -1,0 +1,1 @@
+* * * * * bash /usr/app/backup.sh

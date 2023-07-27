@@ -1,22 +1,23 @@
 # Utilise l'image officielle PostgreSQL comme image de base
 FROM postgres:latest
 
-# Create App Directory
+# Créé l'App Directory
 RUN mkdir -p /usr/app
-WORKDIR /usr/app
 
 # Copy directory
-COPY . .
+COPY ./ ./usr/app
 
 # Pour PostgreSQL
 RUN apt-get update && apt-get install -y postgresql-client cron
 
-RUN ls
-
-RUN chmod +x crontab
+RUN chmod +x /usr/app/backup.sh
 
 # Copie le fichier crontab dans le conteneur
-COPY crontab /etc/cron.d/db_backup_cron
+COPY crontab.txt /etc/cron.d/db_backup_cron
 
 # Démarre le service cron au démarrage du conteneur
-CMD ["cron", "-f"]
+RUN chmod 0644 /etc/cron.d/db_backup_cron
+
+RUN crontab /etc/cron.d/db_backup_cron
+
+RUN cron 
