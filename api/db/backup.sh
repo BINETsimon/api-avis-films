@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Charger les variables d'environnement à partir du fichier .env
-source ../.env
-
 # Variables pour la connexion à la base de données
 DB_HOST="$POSTGRES_HOSTNAME"
 DB_USER="$POSTGRES_USER"

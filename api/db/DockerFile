@@ -2,13 +2,18 @@
 FROM postgres:latest
 
 # Create App Directory
-RUN mkdir -p /usr/db
-WORKDIR /usr/db
+RUN mkdir -p /usr/app
+WORKDIR /usr/app
+
+# Copy directory
+COPY . .
 
 # Pour PostgreSQL
-RUN apt-get update && apt-get install -y postgresql-client
+RUN apt-get update && apt-get install -y postgresql-client cron
 
-RUN chmod +x /backup.sh
+RUN ls
+
+RUN chmod +x crontab
 
 # Copie le fichier crontab dans le conteneur
 COPY crontab /etc/cron.d/db_backup_cron
